@@ -37,46 +37,46 @@
 			<div class="panel-body" id="content">
 
 				<form:form role="form" method="POST" action="${pageContext.request.contextPath}/phones/update" commandName="phone">
-					<div class="col-xs-6">
+					<div class="col-xs-4">
 
-						<div class="form-group">
 							<form:input path="id" hidden="true" readonly="true" />
 							
 							<form:label path="model">Phone model name:</form:label>
 							<form:input path="model" class="form-control" placeholder="model" />
 							<form:errors path="model" cssStyle="color: #ff0000;" />
-							<br>
 
 							<form:label path="os">Operating system (OS):</form:label>
 							<form:input path="os" class="form-control" placeholder="os" />
 							<form:errors path="os" cssStyle="color: #ff0000;" />
-							<br>
 
 							<form:label path="cpu">Central processing unit(CPU):</form:label>
 							<form:input path="cpu" class="form-control" placeholder="cpu" />
 							<form:errors path="cpu" cssStyle="color: #ff0000;" />
-							<br>
 							
 							<form:label path="imageUrl">Image url:</form:label>
 							<form:input path="imageUrl" class="form-control" placeholder="imageUrl" />
 							<form:errors path="imageUrl" cssStyle="color: #ff0000;" />
 							<br>
 							
-							<form:label path="description"></form:label>
+							<form:label path="description">Description:</form:label>
   							<form:textarea path="description" class="form-control" rows="4"/>
-  							<div id="textarea_feedback">rr</div>
+  							<div id="textarea_feedback"></div>
   							<form:errors path="description" cssStyle="color: #ff0000;"> </form:errors>
-  							
-						</div>
-						<button type="submit" class="btn btn-info">update</button>
+  							<br>
+
+						<button type="submit" class="btn btn-info btn-sm">update</button>
 					</div>
 				</form:form>
 				
 			</div>
 		</div>
-
+		
+		<p class="text-center" style="background-color: #f7f7f7">
+		<a href="/myapp/phones/add">Add</a>
+		<a href="/myapp/phones/view">Dbview</a>
+		<a href="/myapp/phones/showphones">View</a>
+		</p>
 		<%@ include file="../footer.jsp"%>
-
 	</div>
 </body>
 </html>

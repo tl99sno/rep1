@@ -65,10 +65,10 @@
 							<form:label path="address.postalcode">Postalcode:</form:label>
 							<form:input path="address.postalcode" class="form-control" readonly="true" />
 						</div>
-						<button type="submit" class="btn btn-default">Save</button>
+						<button type="submit" class="btn btn-default btn-sm">Save</button>
 						
 						<br><br> 
-						<a href="${pageContext.request.contextPath}/person/menu" class="btn btn-default">back</a>
+						<a href="${pageContext.request.contextPath}/person/menu" class="btn btn-default btn-sm">back</a>
 					</div>
 
 				</form:form>

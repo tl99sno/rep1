@@ -9,7 +9,7 @@ public class PropertyHandler {
 	private static PropertyHandler instance = null;
 
 	private Properties props = null;
-	private String filePath = "C://Users//DellDatorn//Documents//GitHub//repository1//myapp//src//main//resources//text.properties";
+	private String filePath = "D://programming//workspace11//myapp//src//main//resources//text.properties";
 
 	private PropertyHandler() {
 		props = new Properties();

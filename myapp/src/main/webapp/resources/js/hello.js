@@ -46,4 +46,31 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-    $("#content").attr("src", "http://feeds.bbci.co.uk/news/rss.xml")});
+	$('a[href = "#getAddressByPathVariable"]').click(function(){
+		$.ajax({
+			url: "http://localhost:8080/myapp/api/address/search/Uppsala"
+		}).then(function(data) {
+			document.getElementById("jsontextarea").value = JSON.stringify(data);
+		});
+	});
+});
+
+$(document).ready(function(){
+	$('a[href = "#getAddressByCountry"]').click(function(){
+		$.ajax({
+			url: "http://localhost:8080/myapp/api/address/searchbycountry?country=Sweden"
+		}).then(function(data) {
+			document.getElementById("jsontextarea").value = JSON.stringify(data);
+		});
+	});	
+});
+
+$(document).ready(function(){
+	$('a[href = "#getAddressByPostalCode"]').click(function(){
+		$.ajax({
+			url: "http://localhost:8080/myapp/api/address/searchByPostalCode?postcode=11111"
+		}).then(function(data) {
+			document.getElementById("jsontextarea").value = JSON.stringify(data);
+		});
+	});	
+});

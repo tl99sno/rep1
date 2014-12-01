@@ -59,13 +59,13 @@
 					</c:forEach>
 				</tbody>
 			</table>
-			<a href="${pageContext.request.contextPath}/person/menu" class="btn btn-default" >back</a>
+			<a href="${pageContext.request.contextPath}/person/menu" class="btn btn-default btn-sm" >back</a>
 			</div>
 		</div>
 		
 		<p class="text-center">
 		<a href="/myapp/person/menu">menu</a> |
-		<a href="/myapp/person/create">add</a> |
+		<a href="/myapp/person/add">add</a> |
 		<a href="/myapp/person/display">dbview</a>
 		</p>
 	</div>	

@@ -27,20 +27,20 @@
 			<div class="panel-heading">SAVE DATA ENTERED</div>
 			<div class="panel-body">
 				<form:form role="form" method="POST" action="result" commandName="person">
-					<div class="col-xs-6">
+					<div class="col-xs-4">
 		
 						<div class="form-group">
 							<form:label path="name">Name:</form:label>
 							<form:input path="name" class="form-control" placeholder="name" />
-							<form:errors path="name" cssStyle="color: #ff0000;" /><br>
+							<form:errors path="name" cssStyle="color: #ff0000;" />
 							
 							<form:label path="surname">Surname:</form:label>
 							<form:input path="surname" class="form-control" placeholder="surname" />
-							<form:errors path="surname" cssStyle="color: #ff0000;" /><br>
+							<form:errors path="surname" cssStyle="color: #ff0000;" />
 							
 							<form:label path="email">E-mail:</form:label>
 							<form:input path="email" class="form-control" placeholder="email" />
-							<form:errors path="email" cssStyle="color: #ff0000;" /><br>
+							<form:errors path="email" cssStyle="color: #ff0000;" />
 
 							<form:label path="phoneNumber">Phone number:</form:label>
 							<form:input path="phoneNumber" class="form-control" placeholder="phoneNumber" />
@@ -64,9 +64,9 @@
 						</div>
 		
 					<br>
-					<button type="submit" class="btn btn-info btn-block">Save</button><br>
-					<a href="${pageContext.request.contextPath}/person/create" class="btn btn-default">back</a>
-		
+					<button type="submit" class="btn btn-info  btn-sm">SAVE&nbsp;<span class="glyphicon glyphicon-ok-sign"></span></button><br><br>
+					<a href="${pageContext.request.contextPath}/person/add" class="btn btn-default btn-sm">BACK</a>
+
 					</div>
 					
 				</form:form>

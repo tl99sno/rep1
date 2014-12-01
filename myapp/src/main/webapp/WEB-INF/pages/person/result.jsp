@@ -35,7 +35,7 @@
 				Street: ${person.address.street}<br>
 		  		Postalcode: ${person.address.postalcode}</p>
 				
-				<a href="${pageContext.request.contextPath}/person/menu" class="btn btn-default">back</a>
+				<a href="${pageContext.request.contextPath}/person/menu" class="btn btn-default btn-sm">back</a>
 			</div>
 			
 		</div>

@@ -31,7 +31,7 @@
 				<div class="row">
 					<div class="col-lg-6">
 						<h3>Person management options</h3>
-						<span class="glyphicon glyphicon-pencil"></span> <a href="/myapp/person/create">Create new one</a><br>
+						<span class="glyphicon glyphicon-pencil"></span> <a href="/myapp/person/add">Create new one</a><br>
 						<span class="glyphicon glyphicon-list-alt"></span> <a href="/myapp/person/display">View all</a><br>
 						<span class="glyphicon glyphicon-search"></span> <a href="#">Search by different criterias (to be implemented)</a><br>
 					</div>
@@ -50,7 +50,7 @@
 			<textarea id="jsontextarea" class="form-control" rows="5"></textarea>
 		</div>
 
-		<a class="btn btn-primary" href="#clear">clear</a>
+		<a class="btn btn-primary btn-sm" href="#clear">clear</a>
 		
 		<div class="footer">
 			<p>&copy; Company 2014</p>

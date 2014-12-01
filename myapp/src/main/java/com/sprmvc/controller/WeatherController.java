@@ -30,7 +30,7 @@ public class WeatherController {
 		return "weather/select";
 	}
 
-	
+	// Get by city/country
 	@RequestMapping(value = "/result", method = RequestMethod.POST)
 	@ResponseBody
 	public ModelAndView getweather(@Valid Address address, BindingResult result) {
@@ -50,6 +50,7 @@ public class WeatherController {
 		return view;
 	}
 
+	// get by geocoordinates
 	@RequestMapping(value="/result1", method = RequestMethod.POST)
 	public ModelAndView getWeatherForCurrentLocation(@ModelAttribute Address address) {  
 		ModelAndView view = new ModelAndView("weather/result");
@@ -57,31 +58,13 @@ public class WeatherController {
 		endpoint = endpoint.replace("{lat}", address.getLatitude()).replace("{lon}", address.getLongitude());
 		String data = connector.getData(endpoint);
 		WeatherJsonParser parser = new WeatherJsonParser(data);
-		System.out.println(data);
 		Weather currentWeather = parser.populateWeatherModel();
 		view.addObject("weather", currentWeather);
+		view.addObject("imgurl", address.getImgUrl());
+		System.out.println(address.getImgUrl());
 		return view;
 	}
 	
-	//slå ihop de här metoderna
-	@RequestMapping(value = "/ddd", method = RequestMethod.POST)
-	@ResponseBody
-	public ModelAndView dddd(@Valid Address address, BindingResult result) {
-		
-		ModelAndView view = new ModelAndView("weather/result");
-		if(result.hasErrors()) {
-			view.setViewName("weather/select");
-			view.addObject("address", address);
-			return view;
-		}
-		String endpoint = prop.getValue("weatherendpoint");
-		String url = endpoint.replace("{}", address.getCity() + "," + address.getCountry());
-		String data = connector.getData(url);
-		WeatherJsonParser parser = new WeatherJsonParser(data);
-		Weather currentWeather = parser.populateWeatherModel();
-		view.addObject("weather", currentWeather);
-		return view;
-	}
 	/**
 	 * Fetches some old json string, for testing, can be deleted
 	 * @param address

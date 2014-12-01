@@ -1,4 +1,5 @@
 <%@ include file="../header.jsp"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 
 <html>
 
@@ -10,17 +11,7 @@
 
 	<div class="container">
 
-		<div class="masthead">
-			<ul class="nav nav-justified">
-				<li><a href="/myapp">home</a></li>
-				<li class="active"><a href="/myapp/address/menu">address</a></li>
-				<li><a href="/myapp/person/menu">person</a></li>
-				<li><a href="/myapp/weather/select">weather</a></li>
-				<li><a href="/myapp/phones/menu">phones</a></li>
-				<li><a href="#">about</a></li>
-			</ul>
-		</div>
-
+		<%@ include file="navigationmenu.jsp"%>
 
 		<br>
 		<div class="panel panel-default">
@@ -55,13 +46,13 @@
 					</tbody>
 
 				</table>
-				<a href="${pageContext.request.contextPath}/address/menu" class="btn btn-default">back</a>
+				<a href="${ctx}/address/menu" class="btn btn-default btn-sm">back</a>
 			</div>
 
 		</div>
 		<p class="text-center">
 		<a href="/myapp/address/menu">MENU</a> |
-		<a href="/myapp/address/create">ADD</a>
+		<a href="/myapp/address/add">ADD</a>
 		</p>
 		
 	</div>

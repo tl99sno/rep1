@@ -24,11 +24,6 @@ public class PhonesController {
 	public String phonesMenu() {
 		return "phones/menu";
 	}
-
-	@RequestMapping(value="test")
-	public String test() {
-		return "phones/test";
-	}
 	
 	// add validation later
 	@RequestMapping(value="add")

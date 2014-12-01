@@ -32,7 +32,7 @@
 				CPU: ${phone.cpu}<br>
 				Image url: ${phone.imageUrl}
 			
-			<p> <a href="${pageContext.request.contextPath}/phones/menu" class="btn btn-default">back</a> </p>
+			<p> <a href="${pageContext.request.contextPath}/phones/menu" class="btn btn-default btn-sm">back</a> </p>
 			
 			</div>
 		</div>

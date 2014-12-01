@@ -26,17 +26,17 @@ public class AddressController {
         return "address/menu";
     }
 	
-    @RequestMapping(value="/create", method=RequestMethod.GET)
+    @RequestMapping(value="/add", method=RequestMethod.GET)
     public String create(Model model) {
         model.addAttribute("address", new Address());
-        return "address/create";
+        return "address/add";
     }
 
     @RequestMapping(value="/result", method=RequestMethod.POST)
     public ModelAndView save(@Valid Address address, BindingResult result) {	
     	ModelAndView view = new ModelAndView("address/result");
     	if (result.hasErrors()){
-    		view.setViewName("address/create");
+    		view.setViewName("address/add");
     		return view;
     	}
     	else {

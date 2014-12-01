@@ -35,14 +35,15 @@ public class PersonController {
         return "person/menu";
     }
     
-	@RequestMapping(value = "/create", method = RequestMethod.GET)
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
 	public String chooseAddress(Model model) {
 		List<Address> listOfAddresses = addressService.findAll();
 		model.addAttribute("addresses", listOfAddresses);
 		model.addAttribute("adrs", new Address());
-		return "person/create";
+		return "person/add";
 	}
 
+	// add validation or exception handling for nullpointers here
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String enterPersonDetails(@ModelAttribute Address chosenaddress, Model model) {
 		Address address  = addressService.findById(chosenaddress.getId());

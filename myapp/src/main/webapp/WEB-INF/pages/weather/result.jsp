@@ -1,34 +1,25 @@
 <%@ include file="../header.jsp"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 
 <head>
-	<title>Some title</title>
+	<title>Current weather</title>
 </head>
 
 <body>
 
 	<div class="container">
 
-		<div class="masthead">
-			<ul class="nav nav-justified">
-				<li><a href="/myapp">home</a></li>
-				<li><a href="/myapp/address/menu">address</a></li>
-				<li><a href="/myapp/person/menu">person</a></li>
-				<li class="active"><a href="/myapp/weather/select">weather</a></li>
-				<li><a href="/myapp/phones/menu">phones</a></li>
-				<li><a href="#">about</a></li>
-			</ul>
-		</div>
-
+		<%@ include file="navigationmenu.jsp"%>
+		
 		<br>
 		<div class="panel panel-default">
-			<div class="panel-heading">Current weather conditions for
-				${weather.city}/${weather.country}</div>
+			<div class="panel-heading">CURRENT WEATHER CONDITIONS FOR ${weather.city}, ${weather.country}</div>
 			<div class="panel-body">
 
 				<div class="row">
 					<div class="col-lg-4">
 
-						<h4>Temperatures</h4>
+						<h5>TEMPERATURES</h5>
 						<ul style="list-style-type: circle">
 							<li>Temperature: ${weather.temperature} C</li>
 							<li>Min: ${weather.temp_min} C</li>
@@ -36,7 +27,7 @@
 						</ul>
 						<br>
 
-						<h4>Weather conditions:</h4>
+						<h5>WATHER CONDITIONS:</h5>
 						<ul style="list-style-type: circle">
 							<li>Wind speed: ${weather.windSpeed} m/s</li>
 							<li>Wind direction: ${weather.windDirection} deg</li>
@@ -49,7 +40,7 @@
 						</ul>
 						<br>
 
-						<h4>Location info:</h4>
+						<h5>LOCATION INFO:</h5>
 						<ul style="list-style-type: circle">
 							<li>Country: ${weather.country}</li>
 							<li>City: ${weather.city}</li>
@@ -59,14 +50,15 @@
 						<br>
 
 						<p>
-							<a href="${pageContext.request.contextPath}/weather/select"
-								class="btn btn-default">make new inquiry</a>
+							<a href="${ctx}/weather/select" class="btn btn-default btn-sm">search again <span class="glyphicon glyphicon-search"></span></a>
 						</p>
 					</div>
 
+					<div class="col-lg-6">
+						<img src="${imgurl}" class="thumbnail">
+					</div>
+			
 				</div>
-
-
 			</div>
 		</div>
 	</div>

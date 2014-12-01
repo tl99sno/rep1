@@ -1,4 +1,5 @@
 <%@ include file="../header.jsp"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 
 <html>
 <head>
@@ -9,28 +10,19 @@
 
 	<div class="container">
 	
-		<div class="masthead">
-			<ul class="nav nav-justified">
-				<li><a href="/myapp">home</a></li>
-				<li class="active"><a href="/myapp/address/menu">address</a></li>
-				<li><a href="/myapp/person/menu">person</a></li>
-				<li><a href="/myapp/weather/select">weather</a></li>
-				<li><a href="/myapp/phones/menu">phones</a></li>
-				<li><a href="#">about</a></li>
-			</ul>
-		</div>
+		<%@ include file="navigationmenu.jsp"%>
 
 		<br>
 		<div class="panel panel-default">
-			<div class="panel-heading">FOLLOWING DATA SAVEd TO ADDRESS TABLE IN DB</div>
+			<div class="panel-heading">FOLLOWING DATA SAVED TO ADDRESS TABLE IN DB</div>
 			<div class="panel-body">
 				Country: ${address.country}<br>
 				City: ${address.city}<br>
 				Street: ${address.street}<br>
 				${address.postalcode}<br><br>
 				
-				<a href="${pageContext.request.contextPath}/address/create" class="btn btn-default">create more</a><br><br>
-				<a href="${pageContext.request.contextPath}/address/menu" class="btn btn-default">back</a>
+				<a href="${ctx}/address/create" class="btn btn-default btn-sm">create more</a><br><br>
+				<a href="${ctx}/address/menu" class="btn btn-default btn-sm">back</a>
 			</div>
 		</div>
 		

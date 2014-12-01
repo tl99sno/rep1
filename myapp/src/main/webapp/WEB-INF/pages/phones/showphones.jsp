@@ -41,7 +41,7 @@
 					<c:forEach var="phone" items="${listOfPhones}" varStatus="loop">
 						<div class="col-lg-4">
 							<h3 class="text-center">${phone.model}</h3>
-							<img src="../resources/img/phones/${phone.imageUrl}" class="img-rounded"><br>
+							<img src="../resources/img/phones/${phone.imageUrl}" ><br>
 							
 							<a href="${ctx}/phones/edit/${phone.id}" class="btn btn-default btn-xs">EDIT <span class="glyphicon glyphicon-edit"></span> </a> &nbsp;
 							<a href="${ctx}/phones/delete/${phone.id}?from=showphones" class="btn btn-default btn-xs">DELETE <span class="glyphicon glyphicon-remove-sign"></span> </a> <br>
@@ -62,7 +62,7 @@
 			</div>
 		</div>
 
-		<p class="text-center">
+		<p class="text-center" style="background-color: #f7f7f7">
 		<a href="/myapp/phones/add">Add</a>
 		<a href="/myapp/phones/view">Dbview</a>
 		<a href="/myapp/phones/showphones">View</a>

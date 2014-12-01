@@ -53,8 +53,8 @@
 							</c:forEach>
 						</tbody>
 					</table>
-					<input type="submit" name="submit" value="select address" class="btn btn-default" /><br><br>
-					<a href="${pageContext.request.contextPath}/person/menu" class="btn btn-default">back</a>
+					<input type="submit" name="submit" value="select address" class="btn btn-default btn-sm" /><br><br>
+					<a href="${pageContext.request.contextPath}/person/menu" class="btn btn-default btn-sm">back</a>
 				</form:form>
 			</div>
 		</div>

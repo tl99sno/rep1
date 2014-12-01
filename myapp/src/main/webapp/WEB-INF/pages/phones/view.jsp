@@ -57,10 +57,17 @@
 					</tbody>
 
 				</table>
-				<a href="${pageContext.request.contextPath}/phones/menu" class="btn btn-default">back</a>
+				<a href="${pageContext.request.contextPath}/phones/menu" class="btn btn-default btn-sm">back</a>
 			</div>
 
 		</div>
+				
+		<p class="text-center" style="background-color: #f7f7f7">
+		<a href="/myapp/phones/add">Add</a>
+		<a href="/myapp/phones/view">Dbview</a>
+		<a href="/myapp/phones/showphones">View</a>
+		</p>
+		<%@ include file="../footer.jsp"%>
 	</div>
 
 </body>

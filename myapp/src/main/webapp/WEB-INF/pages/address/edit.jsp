@@ -1,4 +1,5 @@
 <%@ include file="../header.jsp"%>
+<c:set var="ctx" value="${pageContext.request.contextPath}"/>
 
 <html>
 <head>
@@ -12,48 +13,36 @@
 	
 	<div class="container">
 	
-		<div class="masthead">
-			<ul class="nav nav-justified">
-				<li><a href="/myapp">home</a></li>
-				<li class="active"><a href="/myapp/address/menu">address</a></li>
-				<li><a href="/myapp/person/menu">person</a></li>
-				<li><a href="/myapp/weather/select">weather</a></li>
-				<li><a href="/myapp/phones/menu">phones</a></li>
-				<li><a href="#">about</a></li>
-			</ul>
-		</div>
+		<%@ include file="navigationmenu.jsp"%>
 
 		<br>
 		<div class="panel panel-default">
 			<div class="panel-heading">EDIT/UPDATE ADDRESS</div>
 			<div class="panel-body">
 				<form:form role="form" method="POST" action="${pageContext.request.contextPath}/address/update" commandName="address">
-					<div class="col-xs-6">
+					<div class="col-xs-4">
 	
-						<div class="form-group">
 							<form:input path="id" hidden="true" readonly="true" />
 							
 							<form:label path="country">Country:</form:label>
 							<form:input path="country" class="form-control" />
-							<form:errors path="country" cssStyle="color: #ff0000;" /><br>
+							<form:errors path="country" cssStyle="color: #ff0000;" />
 							
 							<form:label path="city">City:</form:label>
 							<form:input path="city" class="form-control" />
-							<form:errors path="city" cssStyle="color: #ff0000;" /><br>
+							<form:errors path="city" cssStyle="color: #ff0000;" />
 							
 							<form:label path="street">Street:</form:label>
 							<form:input path="street" class="form-control" />
-							<form:errors path="street" cssStyle="color: #ff0000;" /><br>
+							<form:errors path="street" cssStyle="color: #ff0000;" />
 							
-							<form:label path="postalcode">Postalcode:</form:label>
+							<form:label path="postalcode">Postal code:</form:label>
 							<form:input path="postalcode" class="form-control" />
 							<form:errors path="postalcode" cssStyle="color: #ff0000;" /><br>
-						</div>
 						
-						
-						<button type="submit" class="btn btn-default">update</button>
+						<button type="submit" class="btn btn-default btn-sm">update</button>
 						<br>
-						<br> <a	href="${pageContext.request.contextPath}/address/display" class="btn btn-default">back</a>
+						<br> <a	href="${ctx}/address/display" class="btn btn-default btn-sm">back</a>
 					</div>
 				</form:form>
 			</div>

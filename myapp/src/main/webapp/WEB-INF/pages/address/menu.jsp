@@ -10,17 +10,7 @@
 
 	<div class="container">
 	
-		<div class="masthead">
-			<ul class="nav nav-justified">
-				<li><a href="/myapp">home</a></li>
-				<li class="active"><a href="/myapp/address/menu">address</a></li>
-				<li><a href="/myapp/person/menu">person</a></li>
-				<li><a href="/myapp/weather/select">weather</a></li>
-				<li><a href="/myapp/phones/menu">phones</a></li>
-				<li><a href="#">about</a></li>
-			</ul>
-		</div>
-
+		<%@ include file="navigationmenu.jsp"%>
 
 		<br>
 		<div class="panel panel-default">
@@ -31,13 +21,25 @@
 					<div class="col-lg-6">
 					
 						<h3>Address management options</h3>
-						<span class="glyphicon glyphicon-pencil"></span> <a href="/myapp/address/create">Create new one</a><br>
+						<span class="glyphicon glyphicon-pencil"></span> <a href="/myapp/address/add">Create new one</a><br>
 						<span class="glyphicon glyphicon-list-alt"></span> <a href="/myapp/address/display">View all</a><br>
 						
 						<h3>Search by other criterias</h3>
 						<span class="glyphicon glyphicon-search"></span> <a href="#getAddressByPathVariable">Pathvariable = Germany</a><br>
 						<span class="glyphicon glyphicon-search"></span> <a href="#getAddressByCountry">Country</a><br>
 						<span class="glyphicon glyphicon-search"></span> <a href="#getAddressByPostalCode">Postalcode</a><br>
+
+
+						<br>
+						<form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Search">
+							</div>
+							<button type="submit" class="btn btn-default">search <span class="glyphicon glyphicon-search"></span></button>
+						</form>
+
+
+
 					</div>
 					<div class="col-lg-6">
 						<h3>REST Service options</h3>
@@ -59,19 +61,7 @@
   		<textarea id="jsontextarea" class="form-control" rows="6" > </textarea> <br>
 
 		<a class="btn btn-primary" href="#clear">clear</a><br><br>
-
-		<button type="button" class="btn btn-default btn-sm">
-			<span class="glyphicon glyphicon-search"></span> Search
-		</button>
-
-		<button type="button" class="btn btn-default btn-xs">
-			<span class="glyphicon glyphicon-search"></span> Search
-		</button>
-
-		<a href="#"> <span class="glyphicon glyphicon-search"></span>
-		</a>
-		
-		
+	
 		<%@ include file="../footer.jsp"%>
 	</div>
         				
